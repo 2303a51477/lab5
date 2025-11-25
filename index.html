@@ -1,0 +1,389 @@
+        </div>
+    </div>
+        function showPage(pageName) {
+            var pages = document.getElementsByClassName("page");
+                p.style.display = "none";
+            document.getElementById(pageName).style.display = "block";
+
+        // ADD BOOK
+        function addBook() {
+            let title = document.getElementById("title");
+            let author = document.getElementById("author");
+            let year = document.getElementById("year");
+
+            let isValid = true;
+        }
+            }
+            for (let p of pages) {
+
+    <script>
+        let totalBooks = 0;
+        let cart = [];
+
+            </div>
+
+                        <th>Remove</th>
+                    </tr>
+                </table>
+                        <th>Author</th>
+                        <th>Year</th>
+                    <tr>
+                        <th>Title</th>
+
+                <table id="cartTable">
+
+            <!-- CART PAGE -->
+            <div id="cart" class="page" style="display:none;">
+                <h2>Your Cart</h2>
+                </table>
+            </div>
+                        <th>Add to Cart</th>
+                    </tr>
+                        <th>Author</th>
+                        <th>Year</th>
+                    <tr>
+                        <th>Title</th>
+                <table id="inventoryTable">
+                <h2>Books Inventory</h2>
+
+            <!-- BOOK INVENTORY -->
+            <div id="inventory" class="page" style="display:none;">
+
+            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f4f4f4;
+                <button class="btn" onclick="addBook()">Add Book</button>
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 25px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #34495e;
+            padding-top: 20px;
+            position: fixed;
+
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar a:hover {
+            background: #2c3e50;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            padding: 20px;
+            // Reset errors
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #2c3e50;
+                <div id="err-year" class="error-msg"></div>
+            color: white;
+        }
+
+        .btn {
+            background: #27ae60;
+            document.getElementById("err-title").innerHTML = "";
+            color: white;
+            padding: 8px 14px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+            document.getElementById("err-author").innerHTML = "";
+        /* NAVBAR */
+        .navbar {
+                <input type="number" id="year" class="input-box" placeholder="Published Year">
+            background: #2c3e50;
+            padding: 15px 25px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #34495e;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+        }
+
+        .btn {
+            background: #27ae60;
+            color: white;
+            padding: 8px 14px;
+
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2ecc71;
+        }
+
+        .cart-btn {
+            background: #2980b9;
+        }
+
+        .cart-btn:hover {
+            background: #3498db;
+            document.getElementById("err-year").innerHTML = "";
+        }
+
+        /* ERROR HANDLING */
+        .error {
+            border: 2px solid red;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">Library Management System</div>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#" onclick="showPage('dashboard')">📊 Dashboard</a>
+            <a href="#" onclick="showPage('addBook')">➕ Add Book</a>
+            <a href="#" onclick="showPage('inventory')">📚 Books Inventory</a>
+            <a href="#" onclick="showPage('cart')">🛒 Cart</a>
+        </div>
+
+        <div class="content">
+
+            <!-- DASHBOARD -->
+            <div id="dashboard" class="page">
+                <div class="card">
+                    <h2>Total Books: <span id="totalBooks">0</span></h2>
+                    <h2>Cart Items: <span id="cartCount">0</span></h2>
+                </div>
+            title.classList.remove("error");
+            </div>
+
+            <!-- ADD BOOK -->
+            <div id="addBook" class="page" style="display:none;">
+                <h2>Add New Book</h2>
+
+                <input type="text" id="title" class="input-box" placeholder="Book Title">
+                <div id="err-title" class="error-msg"></div>
+
+                <input type="text" id="author" class="input-box" placeholder="Author Name">
+                <div id="err-author" class="error-msg"></div>
+
+            author.classList.remove("error");
+
+            year.classList.remove("error");
+
+
+            // Validation
+            if (title.value.trim() === "") {
+
+                document.getElementById("err-title").innerHTML = "This field is required";
+                title.classList.add("error");
+
+                isValid = false;
+            }
+
+
+            if (author.value.trim() === "") {
+
+                document.getElementById("err-author").innerHTML = "This field is required";
+                author.classList.add("error");
+
+                isValid = false;
+            }
+
+
+            if (year.value.trim() === "") {
+
+                document.getElementById("err-year").innerHTML = "This field is required";
+                year.classList.add("error");
+
+                isValid = false;
+            }
+
+
+            if (!isValid) return;
+
+
+            // Insert into inventory
+
+            let table = document.getElementById("inventoryTable");
+            let row = table.insertRow();
+
+
+            row.insertCell(0).innerHTML = title.value;
+
+            row.insertCell(1).innerHTML = author.value;
+            row.insertCell(2).innerHTML = year.value;
+
+            row.insertCell(3).innerHTML = `<button class='btn cart-btn' onclick="addToCart('${title.value}', '${author.value}', '${year.value}')">Add to Cart</button>`;
+
+
+            totalBooks++;
+            document.getElementById("totalBooks").innerText = totalBooks;
+
+
+            title.value = "";
+
+            author.value = "";
+            year.value = "";
+
+        }
+
+
+        // ADD TO CART
+
+        function addToCart(title, author, year) {
+
+            cart.push({ title, author, year });
+
+            updateCartUI();
+
+            alert("Book added to cart!");
+        }
+
+
+        // UPDATE CART UI
+
+        function updateCartUI() {
+            let table = document.getElementById("cartTable");
+
+
+            table.innerHTML = `
+                <tr>
+
+                    <th>Title</th>
+                    <th>Author</th>
+
+                    <th>Year</th>
+                    <th>Remove</th>
+
+                </tr>
+            `;
+
+
+            cart.forEach((book, index) => {
+
+                let row = table.insertRow();
+                row.insertCell(0).innerHTML = book.title;
+
+                row.insertCell(1).innerHTML = book.author;
+                row.insertCell(2).innerHTML = book.year;
+
+                row.insertCell(3).innerHTML = `<button class='btn' onclick="removeFromCart(${index})">Remove</button>`;
+            });
+
+
+            document.getElementById("cartCount").innerText = cart.length;
+
+        }
+
+
+        // REMOVE FROM CART
+        function removeFromCart(index) {
+
+            cart.splice(index, 1);
+            updateCartUI();
+
+        }
+    </script>
+
+
+</body>
+
+</html>
+
